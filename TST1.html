@@ -2,15 +2,31 @@
 <html>
 <head>
     <style>
+        :root {
+            --bg-color: white;
+            --text-color: black;
+            --border-color: black;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #1a1a1a;
+                --text-color: #ffffff;
+                --border-color: #ffffff;
+            }
+        }
+
         body {
             font-family: 'Helvetica', 'Arial', sans-serif;
             font-size: 12px;
             line-height: 1.4;
             margin: 0;
             padding: 20px;
+            background-color: var(--bg-color);
+            color: var(--text-color);
         }
         .label {
-            border: 1px solid black;
+            border: 1px solid var(--border-color);
             padding: 10px;
             width: 250px;
         }
@@ -22,12 +38,12 @@
         .subheader {
             font-size: 14px;
             font-weight: bold;
-            border-top: 1px solid black;
-            border-bottom: 10px solid black;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 10px solid var(--border-color);
             padding: 3px 0;
         }
         .item-line {
-            border-top: 1px solid black;
+            border-top: 1px solid var(--border-color);
             padding: 3px 0;
         }
         .bold {
